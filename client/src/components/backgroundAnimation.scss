@@ -1,0 +1,28 @@
+.background-animation {
+    position: absolute;
+    width: 100vw;
+    height: inherit;
+    min-height: 100vh;
+    z-index: -1000;
+    background: transparent;
+
+    &.animation {
+        animation: backgroundAnimation 1s ease-in-out;
+    }
+
+    &.no-animation {
+        animation: none;
+    }
+}
+
+@keyframes backgroundAnimation {
+    from {
+        background: black;
+        clip-path: circle(10% at 0% 0%);
+    }
+
+    to {
+        background: transparent;
+        clip-path: circle(200% at 0% 0%);
+    }
+}

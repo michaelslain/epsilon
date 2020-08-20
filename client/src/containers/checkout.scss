@@ -1,0 +1,121 @@
+.checkout-page {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .tabs-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 700px;
+        color: lightgrey;
+        margin-top: 100px;
+
+        .tab {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .window {
+        background: #171717;
+        border-radius: 10px;
+        width: 700px;
+        height: 600px;
+        overflow: hidden;
+
+        .reel {
+            position: relative;
+            display: flex;
+            height: inherit;
+            transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            width: calc(100% * 3);
+
+            .page {
+                width: 700px;
+                height: inherit;
+
+                &.review-cart {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .total-price {
+                        color: white;
+                    }
+
+                    .cart-item-container {
+                        width: inherit;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        overflow: scroll;
+                        height: 70%;
+                    }
+                }
+
+                &.address-form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .address-label {
+                        color: lightgrey;
+                        font-size: 25px;
+                        width: 70%;
+                    }
+
+                    .address-field {
+                        width: calc(70% - 20px);
+                        margin-top: 20px;
+                        padding: 20px;
+                        background: transparent;
+                        border-style: solid;
+                        border-bottom-width: 5px;
+                        border-color: cornflowerblue;
+                        color: white;
+                        font-size: 30px;
+                        padding-left: 0;
+                        outline: none;
+                    }
+                }
+
+                &.checkout-form {
+                    .paypal-container {
+                        display: grid;
+                        width: 70%;
+                        margin: auto;
+                        margin-top: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .next-button {
+        margin-bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .checkout-page {
+        .tabs-container {
+            width: 100vw;
+        }
+
+        .window {
+            width: 100vw;
+
+            .reel .page {
+                width: 100vw;
+            }
+        }
+    }
+}

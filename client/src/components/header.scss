@@ -1,0 +1,98 @@
+$green: #2da66f;
+$brown: #b48484;
+
+.header {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+
+    .logo {
+        background: linear-gradient(to right, $green, $brown);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: normal;
+    }
+
+    .text-container {
+        display: flex;
+
+        .tabs-container {
+            display: flex;
+
+            .back {
+                display: none;
+            }
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+
+            .cart-image {
+                width: 25px;
+                margin-right: 5px;
+                position: relative;
+                bottom: 2px;
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header {
+        position: relative;
+
+        .text-container {
+            .tabs-container {
+                position: fixed;
+                flex-direction: column;
+                height: 50vh;
+                width: 100vw;
+                padding-bottom: 25vh;
+                padding-top: 25vh;
+                align-items: center;
+                justify-content: space-around;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 5;
+
+                * {
+                    color: white;
+                    margin-left: 0;
+                    font-size: 20px;
+                }
+
+                .back {
+                    display: block;
+                    position: absolute;
+                    width: 30px;
+                    left: 50px;
+                    top: 50px;
+                }
+            }
+
+            .cart {
+                font-size: 20px;
+
+                .cart-image {
+                    width: 40px;
+                }
+            }
+
+            .burger {
+                display: block;
+                height: 30px;
+                margin-left: 50px;
+            }
+        }
+    }
+}

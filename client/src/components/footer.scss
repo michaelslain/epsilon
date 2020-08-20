@@ -1,0 +1,46 @@
+.footer {
+    width: 100vw;
+    height: 100px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+
+    .payment-container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        .image {
+            filter: grayscale(100%);
+            opacity: 0.5;
+
+            &.master-card {
+                height: 50px;
+            }
+
+            &.visa {
+                height: 30px;
+            }
+
+            &.paypal {
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .footer .payment-container {
+        gap: 15px;
+
+        .image {
+            &.master-card,
+            &.visa,
+            &.paypal {
+                height: 25px;
+            }
+        }
+    }
+}

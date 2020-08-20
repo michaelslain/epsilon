@@ -1,0 +1,32 @@
+.banner {
+    width: 100vw;
+    position: fixed;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bannerAnimation 0.3s ease-in-out;
+    z-index: 100;
+
+    .banner-text {
+        font-size: 30px;
+        color: white;
+    }
+
+    &.error {
+        background: #eb4034;
+    }
+
+    &.good {
+        background: cornflowerblue;
+    }
+}
+
+@keyframes bannerAnimation {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100px;
+    }
+}

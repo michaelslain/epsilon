@@ -1,0 +1,34 @@
+.shop-showcase {
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10%;
+    margin-top: 10vh;
+    justify-items: center;
+    padding-bottom: 100px;
+}
+
+.no-products-container {
+    width: 100vw;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .text {
+        color: grey;
+        font-size: 50px;
+        font-weight: lighter;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .shop-showcase {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        margin: auto;
+    }
+}

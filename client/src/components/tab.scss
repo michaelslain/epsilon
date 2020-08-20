@@ -1,0 +1,11 @@
+.header-tab {
+    color: white;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: lighter;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

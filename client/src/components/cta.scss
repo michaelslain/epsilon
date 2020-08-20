@@ -1,0 +1,22 @@
+.cta {
+    color: black;
+    padding: 15px;
+    background: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    font-weight: bold;
+
+    &.clear {
+        background: transparent;
+        color: white;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

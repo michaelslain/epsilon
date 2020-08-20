@@ -1,0 +1,22 @@
+.checkout-cart-item {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin: auto;
+    background: #333333;
+    padding: 10px;
+    border-radius: 2em;
+
+    .name {
+        color: white;
+    }
+
+    .price {
+        color: lightgrey;
+    }
+
+    .amount {
+        color: white;
+        font-weight: bold;
+    }
+}

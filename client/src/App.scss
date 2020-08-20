@@ -1,0 +1,32 @@
+$green: #2da66f;
+$brown: #b48484;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Caudex', serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background: #080808;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     background: black;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: grey;
+//     border-radius: 2em;
+// }

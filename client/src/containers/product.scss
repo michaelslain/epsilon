@@ -1,0 +1,126 @@
+.product-page {
+    width: 100vw;
+    height: calc(100vh - 200px);
+    display: flex;
+
+    .image-container,
+    .text-container {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .image-container {
+        .inner-image-container {
+            width: 70%;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            .image {
+                position: absolute;
+                height: inherit;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .text-container {
+        .inner-text-container {
+            width: 80%;
+            height: 100%;
+
+            .name {
+                margin-top: 200px;
+                font-size: 60px;
+                color: white;
+            }
+
+            .price {
+                font-size: 30px;
+                color: lightgrey;
+                font-weight: lighter;
+            }
+
+            .amount-heading {
+                font-size: 20px;
+                margin-top: 50px;
+                font-weight: lighter;
+                color: grey;
+            }
+
+            .amount-container {
+                width: inherit;
+                margin-top: 10px;
+                display: flex;
+
+                * {
+                    margin-right: 10px;
+                    min-width: 30px;
+                    text-align: center;
+
+                    &.amount-clear {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .cta-s {
+                margin-top: 140px;
+
+                * {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .product-page {
+        flex-direction: column;
+        align-items: center;
+
+        .image-container {
+            margin-top: 50px;
+
+            .inner-image-container {
+                width: 1000px;
+            }
+        }
+
+        .text-container {
+            margin-bottom: 100px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .inner-text-container {
+                width: auto;
+                height: auto;
+
+                .name {
+                    margin-top: 50px;
+                }
+
+                .cta-s {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+$green: #2da66f;
+$brown: #b48484;
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/background.gif') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+
+    .main-logo {
+        width: 500px;
+    }
+
+    .cta-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+    }
+}
