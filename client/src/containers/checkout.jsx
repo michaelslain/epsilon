@@ -84,7 +84,7 @@ export default function Checkout({
     const handleUpdateAddress = e => setAddress(e.target.value)
 
     const handleIsAddressValid = () => {
-        setAddressIsValid(true)
+        setAddressIsValid(false)
 
         const validCountries = [
             'america',
