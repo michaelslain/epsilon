@@ -98,14 +98,11 @@ export default function Checkout({
 
         tokens = tokens.filter(token => token !== '')
 
-        console.log(tokens)
-
         if (tokens.length === 0) return
         if (tokens.length < 5) return
         if (Number.isNaN(Number(tokens[0]))) return
-        console.log('is number')
+
         if (tokens[0].length < 3) return
-        console.log('is long number')
 
         if (
             !tokens.join('').includes('unitedstates') &&
@@ -113,8 +110,6 @@ export default function Checkout({
             !validCountries.includes(tokens[tokens.length - 1].toLowerCase())
         )
             return
-
-        console.log('is america')
 
         setAddressIsValid(true)
     }
