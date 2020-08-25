@@ -15,10 +15,10 @@ router.get('/get', async (req, res) => {
 
 // POST
 router.post('/post', async (req, res) => {
-    const { payment, address, totalPayment } = req.body
+    const { items, address, totalPayment } = req.body
 
     try {
-        const newOrder = new Order({ payment, address, totalPayment })
+        const newOrder = new Order({ totalPayment, address, items })
 
         await newOrder.save()
         res.status(200).json({ message: 'Order added' })
@@ -40,13 +40,13 @@ router.delete('/delete/:id', async (req, res) => {
 // UPDATE
 router.patch('/update/:id', async (req, res) => {
     try {
-        const { payment, address, totalPayment } = req.body
+        const { items, address, totalPayment } = req.body
 
         await Order.updateOne(
             { _id: req.params.id },
             {
                 $set: {
-                    payment,
+                    items,
                     address,
                     totalPayment,
                 },

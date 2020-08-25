@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, Fragment } from 'react'
 import { useHistory } from 'react-router-dom'
 import { PayPalButton } from 'react-paypal-button-v2'
 import './checkout.scss'
+import axios from 'axios'
 
 import Cta from '../components/cta'
 import CartApi from '../cartApi'
@@ -114,7 +115,23 @@ export default function Checkout({
         setAddressIsValid(true)
     }
 
-    const handleOnSuccess = () => {
+    const handleOnSuccess = async () => {
+        let body = new FormData()
+
+        body.append('address', address)
+        body.append('totalPayment', totalPrice)
+        body.append(
+            'items',
+            products.map(product => product._id)
+        )
+
+        await axios({
+            method: 'post',
+            url: '/api/orders/post/',
+            data: body,
+            headers: { 'Content-Type': 'multipart/form-data' },
+        })
+
         setBanner({
             type: 'good',
             text: 'Your payment is complete and the order is on your way!',

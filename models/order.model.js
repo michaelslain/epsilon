@@ -8,28 +8,12 @@ const orderSchema = new mongoose.Schema({
     },
     totalPayment: {
         type: Number,
-        required: false,
-        trim: false,
+        required: true,
     },
-    items: [
-        {
-            name: {
-                type: String,
-                required: true,
-                trim: true,
-            },
-            payment: {
-                type: Number,
-                required: false,
-                trim: false,
-            },
-            size: {
-                type: String,
-                required: true,
-                trim: true,
-            },
-        },
-    ],
+    items: {
+        type: Array,
+        required: true,
+    },
 })
 
 export default mongoose.model('Order', orderSchema)

@@ -64,7 +64,6 @@ function App() {
                 />
                 <Banner banner={banner} setBanner={setBanner} />
                 <Switch>
-                    <Route path="/" exact={true} render={Home} />
                     <Route
                         path="/shop"
                         render={() => (
@@ -125,6 +124,7 @@ function App() {
                             />
                         )}
                     />
+                    <Route path="/" render={Home} />
                 </Switch>
             </BackgroundAnimation>
         </Router>

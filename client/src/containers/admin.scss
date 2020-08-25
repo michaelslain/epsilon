@@ -1,9 +1,51 @@
 .admin-page {
     z-index: 30;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vw;
+    min-height: 100vw;
     background: #080808;
+
+    .admin-header {
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 70px;
+
+        .tab {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .admin-page-products {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        row-gap: 100px;
+
+        .add-product {
+            position: fixed;
+            left: 50px;
+            bottom: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
 }
