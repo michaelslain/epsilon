@@ -25,4 +25,13 @@ $brown: #b48484;
         gap: 30px;
         margin-top: 30px;
     }
+
+    .darkener {
+        background: black;
+        opacity: 0.3;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        z-index: -5;
+    }
 }

@@ -18,6 +18,7 @@ export default function Home() {
                         Learn More
                     </Cta>
                 </div>
+                <div className="darkener"></div>
             </div>
             <Footer style={{ position: 'absolute', top: '100vh' }} />
         </Fragment>
