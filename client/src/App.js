@@ -24,6 +24,9 @@ function App() {
     const [canCart, setCanCart] = useState(false)
     const [fetchCartReloadCounter, setFetchCartReloadCounter] = useState(0)
     const [banner, setBanner] = useState(null)
+    const [adminPassword, setAdminPassword] = useState(
+        process.env.ADMIN_PASSWORD || 'admin'
+    )
 
     useEffect(() => {
         if (products != null) handleInitStorage()
@@ -112,7 +115,7 @@ function App() {
                         )}
                     />
                     <Route
-                        path="/admin"
+                        path={`/${adminPassword}`}
                         render={() => (
                             <Admin
                                 handleFetchProductReload={
